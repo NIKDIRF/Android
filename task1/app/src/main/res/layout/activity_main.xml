@@ -18,6 +18,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
+        android:onClick="clearResult"
         android:id="@+id/buttonAC"
         android:layout_width="179dp"
         android:layout_height="80dp"

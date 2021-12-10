@@ -24,12 +24,12 @@ class MainActivity : AppCompatActivity() {
     companion object {
         const val KEY = "result"
         const val DEFAULT = "…|"
-        const val NUMBERS = setOf("1", "2", "3", "4", "5", "6", "7", "8", "9")
+        val NUMBERS = setOf("1", "2", "3", "4", "5", "6", "7", "8", "9")
     }
 
     fun buttonClicked(view: View) {
         val buttonChar = (view as Button).text
-        if (binding.textViewResult.text == DEFAULT ) {
+        if (binding.textViewResult.text == DEFAULT) {
             if (buttonChar in NUMBERS) {
                 binding.textViewResult.text = buttonChar
             }
@@ -37,5 +37,11 @@ class MainActivity : AppCompatActivity() {
             binding.textViewResult.append(buttonChar)
         }
     }
+
+    fun clearResult(view: View) {
+        binding.textViewResult.text = DEFAULT
+    }
+
+
 
 }
