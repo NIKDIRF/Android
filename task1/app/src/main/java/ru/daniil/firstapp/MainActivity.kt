@@ -2,11 +2,9 @@ package ru.daniil.firstapp
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.os.PersistableBundle
 import android.view.View
 import android.widget.Button
 import ru.daniil.firstapp.databinding.ActivityMainBinding
-import ru.daniil.firstapp.databinding.ActivityMainBinding.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -14,7 +12,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = inflate(layoutInflater)
+        binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
     }
 
