@@ -7,7 +7,7 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/label"
+        android:id="@+id/textViewResult"
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:gravity="end|center"
@@ -25,7 +25,7 @@
         android:textSize="30sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/buttonPI"
-        app:layout_constraintTop_toBottomOf="@+id/label" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewResult" />
 
     <Button
         android:id="@+id/buttonPI"
@@ -35,9 +35,10 @@
         android:textSize="25sp"
         app:layout_constraintStart_toEndOf="@+id/buttonAC"
         app:layout_constraintEnd_toStartOf="@+id/buttonDivide"
-        app:layout_constraintTop_toBottomOf="@+id/label" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewResult" />
 
     <Button
+        android:onClick="buttonClicked"
         android:id="@+id/buttonDivide"
         android:layout_width="80dp"
         android:layout_height="80dp"
@@ -45,9 +46,10 @@
         android:textSize="30sp"
         app:layout_constraintStart_toEndOf="@+id/buttonPI"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/label" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewResult" />
 
     <Button
+        android:onClick="buttonClicked"
         android:id="@+id/buttonSeven"
         android:layout_width="80dp"
         android:layout_height="80dp"
@@ -58,6 +60,7 @@
         app:layout_constraintTop_toBottomOf="@+id/buttonAC" />
 
     <Button
+        android:onClick="buttonClicked"
         android:id="@+id/buttonEight"
         android:layout_width="80dp"
         android:layout_height="80dp"
@@ -68,6 +71,7 @@
         app:layout_constraintTop_toBottomOf="@+id/buttonAC" />
 
     <Button
+        android:onClick="buttonClicked"
         android:id="@+id/buttonNine"
         android:layout_width="80dp"
         android:layout_height="80dp"
@@ -78,6 +82,7 @@
         app:layout_constraintTop_toBottomOf="@+id/buttonPI" />
 
     <Button
+        android:onClick="buttonClicked"
         android:id="@+id/buttonX"
         android:layout_width="80dp"
         android:layout_height="80dp"
@@ -88,6 +93,7 @@
         app:layout_constraintTop_toBottomOf="@+id/buttonDivide" />
 
     <Button
+        android:onClick="buttonClicked"
         android:id="@+id/buttonFour"
         android:layout_width="80dp"
         android:layout_height="80dp"
@@ -98,6 +104,7 @@
         app:layout_constraintTop_toBottomOf="@+id/buttonSeven" />
 
     <Button
+        android:onClick="buttonClicked"
         android:id="@+id/buttonFive"
         android:layout_width="80dp"
         android:layout_height="80dp"
@@ -108,6 +115,7 @@
         app:layout_constraintTop_toBottomOf="@+id/buttonEight" />
 
     <Button
+        android:onClick="buttonClicked"
         android:id="@+id/buttonSix"
         android:layout_width="80dp"
         android:layout_height="80dp"
@@ -118,6 +126,7 @@
         app:layout_constraintTop_toBottomOf="@+id/buttonNine" />
 
     <Button
+        android:onClick="buttonClicked"
         android:id="@+id/buttonMinus"
         android:layout_width="80dp"
         android:layout_height="80dp"
@@ -128,6 +137,7 @@
         app:layout_constraintTop_toBottomOf="@+id/buttonX" />
 
     <Button
+        android:onClick="buttonClicked"
         android:id="@+id/buttonOne"
         android:layout_width="80dp"
         android:layout_height="80dp"
@@ -138,6 +148,7 @@
         app:layout_constraintTop_toBottomOf="@+id/buttonFour" />
 
     <Button
+        android:onClick="buttonClicked"
         android:id="@+id/buttonTwo"
         android:layout_width="80dp"
         android:layout_height="80dp"
@@ -148,6 +159,7 @@
         app:layout_constraintTop_toBottomOf="@+id/buttonFive" />
 
     <Button
+        android:onClick="buttonClicked"
         android:id="@+id/buttonThree"
         android:layout_width="80dp"
         android:layout_height="80dp"
@@ -158,6 +170,7 @@
         app:layout_constraintTop_toBottomOf="@+id/buttonSix" />
 
     <Button
+        android:onClick="buttonClicked"
         android:id="@+id/buttonPlus"
         android:layout_width="80dp"
         android:layout_height="80dp"
@@ -168,6 +181,7 @@
         app:layout_constraintTop_toBottomOf="@+id/buttonMinus" />
 
     <Button
+        android:onClick="buttonClicked"
         android:id="@+id/buttonZero"
         android:layout_width="80dp"
         android:layout_height="80dp"
@@ -178,6 +192,7 @@
         app:layout_constraintTop_toBottomOf="@+id/buttonOne" />
 
     <Button
+        android:onClick="buttonClicked"
         android:id="@+id/buttonComma"
         android:layout_width="80dp"
         android:layout_height="80dp"
