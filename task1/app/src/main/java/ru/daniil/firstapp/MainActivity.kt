@@ -27,7 +27,7 @@ class MainActivity : AppCompatActivity() {
     fun buttonClickedForFirsts(view: View) {
         removeError()
         val buttonText = (view as Button).text
-        if (!binding.textViewResult.text.isEmpty() && binding.textViewResult.text.last() == '0' && !zeroControl && binding.textViewResult.text.length >= MAXLEN) {
+        if (binding.textViewResult.text.isNotEmpty() && binding.textViewResult.text.last() == '0' && !zeroControl && binding.textViewResult.text.length >= MAXLEN) {
             binding.textViewResult.text = binding.textViewResult.text.subSequence(0, binding.textViewResult.text.length - 1)
         }
         if (binding.textViewResult.text.length < MAXLEN) {
@@ -50,7 +50,7 @@ class MainActivity : AppCompatActivity() {
         if (binding.textViewResult.text.isEmpty() && buttonText == "-") {
             binding.textViewResult.append(buttonText)
         }
-        if (!binding.textViewResult.text.isEmpty()) {
+        if (binding.textViewResult.text.isNotEmpty()) {
             if (binding.textViewResult.text.last() in SPECIAL) {
                 binding.textViewResult.text = binding.textViewResult.text.subSequence(0, binding.textViewResult.text.length - 1)
             }
@@ -66,7 +66,7 @@ class MainActivity : AppCompatActivity() {
         removeError()
         val buttonText: CharSequence = PI
         if (binding.textViewResult.text.length < MAXLEN - 2 && !commaControl) {
-            if (!binding.textViewResult.text.isEmpty() && binding.textViewResult.text.last() == '0') {
+            if (binding.textViewResult.text.isNotEmpty() && binding.textViewResult.text.last() == '0') {
                 binding.textViewResult.text = binding.textViewResult.text.subSequence(0, binding.textViewResult.text.length - 1)
             }
             binding.textViewResult.append(buttonText)
@@ -81,9 +81,9 @@ class MainActivity : AppCompatActivity() {
         zeroControl = false
     }
 
-    fun cancelOne() {
+    fun cancelOne(view: View) {
         removeError()
-        if (!binding.textViewResult.text.isEmpty()) {
+        if (binding.textViewResult.text.isNotEmpty()) {
             val last = binding.textViewResult.text.last()
             binding.textViewResult.text = binding.textViewResult.text.subSequence(0, binding.textViewResult.text.length - 1)
             if (last == ',') {
@@ -94,7 +94,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun removeError() {
-        if (!binding.textViewResult.text.isEmpty() &&  binding.textViewResult.text.last() == '!') {
+        if (binding.textViewResult.text.isNotEmpty() &&  binding.textViewResult.text.last() == '!') {
             binding.textViewResult.text = DEFAULT
             commaControl = false
             zeroControl = false
@@ -139,7 +139,7 @@ class MainActivity : AppCompatActivity() {
         const val KEY = "result"
         const val DEFAULT = ""
         const val PI = "3,14"
-        const val MAXLEN = 20
+        const val MAXLEN = 17
         val NUMBERS = setOf('1', '2', '3', '4', '5', '6', '7', '8', '9')
         val SPECIAL = setOf('/', '×', '+', '-', ',')
 
