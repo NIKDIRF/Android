@@ -4,223 +4,213 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/mainBackground"
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/label"
-        android:layout_width="412dp"
-        android:layout_height="217dp"
-        android:layout_gravity="center_horizontal"
-        android:layout_weight="1"
-        android:gravity="center"
+        android:id="@+id/textViewResult"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:gravity="end|center"
         android:text="@string/text"
-
         android:textSize="50sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        android:background="@drawable/number_button"
+        android:textColor="@color/lightText"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <Button
-        android:id="@+id/button9"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="164dp"
-        android:text="@string/_9"
-        app:layout_constraintStart_toEndOf="@+id/button8"
-        app:layout_constraintTop_toBottomOf="@+id/label" />
-
-    <Button
-        android:id="@+id/button6"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="8dp"
-        android:text="@string/_6"
-        app:layout_constraintStart_toEndOf="@+id/button5"
-        app:layout_constraintTop_toBottomOf="@+id/button9" />
-
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="4dp"
-        android:text="@string/_3"
-        app:layout_constraintStart_toEndOf="@+id/button2"
-        app:layout_constraintTop_toBottomOf="@+id/button6" />
-
-    <Button
-        android:id="@+id/buttonPI"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="64dp"
-        android:text="@string/pi"
-        app:layout_constraintStart_toEndOf="@+id/buttonAC"
-        app:layout_constraintTop_toBottomOf="@+id/label" />
-
-    <Button
-        android:id="@+id/buttonDivide"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_marginStart="124dp"
-        android:layout_marginTop="64dp"
-        android:text="@string/divide"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.181"
-        app:layout_constraintStart_toEndOf="@+id/buttonPI"
-        app:layout_constraintTop_toBottomOf="@+id/label" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button7"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="20dp"
+        style="@style/clearButtonStyle"
+        android:background="@drawable/clear_button"
+        android:onClick="clearResult"
+        android:id="@+id/buttonAC"
+        android:text="@string/ac"
+        android:layout_marginTop="25dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/buttonPI"
+        app:layout_constraintTop_toBottomOf="@+id/textViewResult" />
+
+    <Button
+        style="@style/specialButtonStyle"
+        android:background="@drawable/special_button"
+        android:onClick="piButtonClicked"
+        android:id="@+id/buttonPI"
+        android:text="@string/pi"
+        android:layout_marginTop="25dp"
+        app:layout_constraintStart_toEndOf="@+id/buttonAC"
+        app:layout_constraintEnd_toStartOf="@+id/buttonDivide"
+        app:layout_constraintTop_toBottomOf="@+id/textViewResult" />
+
+    <Button
+        style="@style/specialButtonStyle"
+        android:background="@drawable/special_button"
+        android:onClick="specialButtonClicked"
+        android:id="@+id/buttonDivide"
+        android:text="@string/divide"
+        android:layout_marginTop="25dp"
+        app:layout_constraintStart_toEndOf="@+id/buttonPI"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewResult" />
+
+    <Button
+        style="@style/numberButtonStyle"
+        android:background="@drawable/number_button"
+        android:onClick="buttonClickedForFirsts"
+        android:id="@+id/buttonSeven"
         android:text="@string/_7"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/buttonEight"
         app:layout_constraintTop_toBottomOf="@+id/buttonAC" />
 
     <Button
-        android:id="@+id/button8"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="20dp"
+        style="@style/numberButtonStyle"
+        android:background="@drawable/number_button"
+        android:onClick="buttonClickedForFirsts"
+        android:id="@+id/buttonEight"
         android:text="@string/_8"
-        app:layout_constraintStart_toEndOf="@+id/button7"
+        app:layout_constraintStart_toEndOf="@+id/buttonSeven"
+        app:layout_constraintEnd_toStartOf="@id/buttonNine"
+        app:layout_constraintTop_toBottomOf="@+id/buttonAC" />
+
+    <Button
+        style="@style/numberButtonStyle"
+        android:background="@drawable/number_button"
+        android:onClick="buttonClickedForFirsts"
+        android:id="@+id/buttonNine"
+        android:text="@string/_9"
+        app:layout_constraintStart_toEndOf="@+id/buttonEight"
+        app:layout_constraintEnd_toStartOf="@+id/buttonX"
         app:layout_constraintTop_toBottomOf="@+id/buttonPI" />
 
     <Button
+        style="@style/specialButtonStyle"
+        android:background="@drawable/special_button"
+        android:onClick="specialButtonClicked"
         android:id="@+id/buttonX"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="20dp"
         android:text="@string/x"
+        app:layout_constraintStart_toEndOf="@+id/buttonNine"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.4"
-        app:layout_constraintStart_toEndOf="@+id/button9"
         app:layout_constraintTop_toBottomOf="@+id/buttonDivide" />
 
     <Button
-        android:id="@+id/button4"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="4dp"
+        style="@style/numberButtonStyle"
+        android:background="@drawable/number_button"
+        android:onClick="buttonClickedForFirsts"
+        android:id="@+id/buttonFour"
         android:text="@string/_4"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button7" />
+        app:layout_constraintEnd_toStartOf="@+id/buttonFive"
+        app:layout_constraintTop_toBottomOf="@+id/buttonSeven" />
 
     <Button
-        android:id="@+id/button5"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="4dp"
+        style="@style/numberButtonStyle"
+        android:background="@drawable/number_button"
+        android:onClick="buttonClickedForFirsts"
+        android:id="@+id/buttonFive"
         android:text="@string/_5"
-        app:layout_constraintStart_toEndOf="@+id/button4"
-        app:layout_constraintTop_toBottomOf="@+id/button8" />
+        app:layout_constraintStart_toEndOf="@+id/buttonFour"
+        app:layout_constraintEnd_toStartOf="@+id/buttonSix"
+        app:layout_constraintTop_toBottomOf="@+id/buttonEight" />
 
     <Button
+        style="@style/numberButtonStyle"
+        android:background="@drawable/number_button"
+        android:onClick="buttonClickedForFirsts"
+        android:id="@+id/buttonSix"
+        android:text="@string/_6"
+        app:layout_constraintStart_toEndOf="@+id/buttonFive"
+        app:layout_constraintEnd_toStartOf="@id/buttonMinus"
+        app:layout_constraintTop_toBottomOf="@+id/buttonNine" />
+
+    <Button
+        style="@style/specialButtonStyle"
+        android:background="@drawable/special_button"
+        android:onClick="specialButtonClicked"
         android:id="@+id/buttonMinus"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="4dp"
         android:text="@string/minus"
+        app:layout_constraintStart_toEndOf="@+id/buttonSix"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.4"
-        app:layout_constraintStart_toEndOf="@+id/button9"
         app:layout_constraintTop_toBottomOf="@+id/buttonX" />
 
     <Button
-        android:id="@+id/buttonAC"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="64dp"
-        android:text="@string/ac"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/label" />
-
-    <Button
-        android:id="@+id/button1"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="4dp"
+        style="@style/numberButtonStyle"
+        android:background="@drawable/number_button"
+        android:onClick="buttonClickedForFirsts"
+        android:id="@+id/buttonOne"
         android:text="@string/_1"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button4" />
+        app:layout_constraintEnd_toStartOf="@+id/buttonTwo"
+        app:layout_constraintTop_toBottomOf="@+id/buttonFour" />
 
     <Button
-        android:id="@+id/button2"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="4dp"
+        style="@style/numberButtonStyle"
+        android:background="@drawable/number_button"
+        android:onClick="buttonClickedForFirsts"
+        android:id="@+id/buttonTwo"
         android:text="@string/_2"
-        app:layout_constraintStart_toEndOf="@+id/button1"
-        app:layout_constraintTop_toBottomOf="@+id/button5" />
+        app:layout_constraintStart_toEndOf="@+id/buttonOne"
+        app:layout_constraintEnd_toStartOf="@+id/buttonThree"
+        app:layout_constraintTop_toBottomOf="@+id/buttonFive" />
 
     <Button
+        style="@style/numberButtonStyle"
+        android:background="@drawable/number_button"
+        android:onClick="buttonClickedForFirsts"
+        android:id="@+id/buttonThree"
+        android:text="@string/_3"
+        app:layout_constraintStart_toEndOf="@id/buttonTwo"
+        app:layout_constraintEnd_toStartOf="@+id/buttonPlus"
+        app:layout_constraintTop_toBottomOf="@+id/buttonSix" />
+
+    <Button
+        style="@style/specialButtonStyle"
+        android:background="@drawable/special_button"
+        android:onClick="specialButtonClicked"
         android:id="@+id/buttonPlus"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="4dp"
         android:text="@string/plus"
+        app:layout_constraintStart_toEndOf="@+id/buttonThree"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.4"
-        app:layout_constraintStart_toEndOf="@+id/button3"
         app:layout_constraintTop_toBottomOf="@+id/buttonMinus" />
 
     <Button
-        android:id="@+id/button0"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="4dp"
+        style="@style/numberButtonStyle"
+        android:background="@drawable/number_button"
+        android:onClick="zeroButtonClicked"
+        android:id="@+id/buttonZero"
         android:text="@string/_0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button1" />
+        app:layout_constraintEnd_toStartOf="@+id/buttonComma"
+        app:layout_constraintTop_toBottomOf="@+id/buttonOne" />
 
     <Button
+        style="@style/numberButtonStyle"
+        android:background="@drawable/number_button"
+        android:onClick="specialButtonClicked"
         android:id="@+id/buttonComma"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="4dp"
         android:text="@string/comma"
-        app:layout_constraintStart_toEndOf="@+id/button0"
-        app:layout_constraintTop_toBottomOf="@+id/button2" />
+        app:layout_constraintStart_toEndOf="@+id/buttonZero"
+        app:layout_constraintEnd_toStartOf="@+id/buttonBack"
+        app:layout_constraintTop_toBottomOf="@+id/buttonTwo" />
 
     <Button
+        style="@style/numberButtonStyle"
+        android:background="@drawable/number_button"
+        android:onClick="cancelOne"
         android:id="@+id/buttonBack"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="4dp"
         android:text="@string/back"
         app:layout_constraintStart_toEndOf="@+id/buttonComma"
-        app:layout_constraintTop_toBottomOf="@+id/button3" />
+        app:layout_constraintEnd_toStartOf="@+id/buttonEquals"
+        app:layout_constraintTop_toBottomOf="@+id/buttonThree" />
 
     <Button
+        style="@style/equalsButtonStyle"
+        android:background="@drawable/equals_button"
+        android:onClick="calculated"
         android:id="@+id/buttonEquals"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="4dp"
         android:text="@string/equals"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.4"
         app:layout_constraintStart_toEndOf="@+id/buttonBack"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/buttonPlus" />
 
 

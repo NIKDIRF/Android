@@ -1,0 +1,44 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="numberButtonStyle">
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:textColor">@color/lightText</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">30sp</item>
+        <item name="android:layout_width">90dp</item>
+        <item name="android:layout_height">85dp</item>
+    </style>
+
+    <style name="specialButtonStyle">
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:textColor">@color/darkText</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">30sp</item>
+        <item name="android:layout_width">90dp</item>
+        <item name="android:layout_height">85dp</item>
+    </style>
+
+    <style name="equalsButtonStyle">
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:textColor">@color/darkText</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">30sp</item>
+        <item name="android:layout_width">90dp</item>
+        <item name="android:layout_height">85dp</item>
+    </style>
+
+    <style name="clearButtonStyle">
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:textColor">@color/darkText</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">30sp</item>
+        <item name="android:layout_width">190dp</item>
+        <item name="android:layout_height">85dp</item>
+    </style>
+
+
+</resources>
