@@ -62,7 +62,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    fun piButtonClicked() {
+    fun piButtonClicked(view: View) {
         removeError()
         val buttonText: CharSequence = PI
         if (binding.textViewResult.text.length < MAXLEN - 2 && !commaControl) {
@@ -75,7 +75,7 @@ class MainActivity : AppCompatActivity() {
     }
 
 
-    fun clearResult() {
+    fun clearResult(view: View) {
         binding.textViewResult.text = DEFAULT
         commaControl = false
         zeroControl = false
@@ -119,7 +119,7 @@ class MainActivity : AppCompatActivity() {
         return false
     }
 
-    fun calculated() {
+    fun calculated(view: View) {
         try {
             binding.textViewResult.text = ExpressionBuilder(binding.textViewResult.text.toString().replace(',', '.').replace('×', '*')).build().evaluate().toString().replace('.', ',')
             commaControl =  symbolControl()
