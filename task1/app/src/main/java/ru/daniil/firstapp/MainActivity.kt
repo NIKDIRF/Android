@@ -27,7 +27,7 @@ class MainActivity : AppCompatActivity() {
     fun buttonClickedForFirsts(view: View) {
         removeError()
         val buttonText = (view as Button).text
-        if (binding.textViewResult.text.isNotEmpty() && binding.textViewResult.text.last() == '0' && !zeroControl && binding.textViewResult.text.length >= MAXLEN) {
+        if (binding.textViewResult.text.isNotEmpty() && binding.textViewResult.text.last() == '0' && !zeroControl) {
             binding.textViewResult.text = binding.textViewResult.text.subSequence(0, binding.textViewResult.text.length - 1)
         }
         if (binding.textViewResult.text.length < MAXLEN) {
