@@ -11,15 +11,13 @@
         android:layout_width="match_parent"
         android:layout_height="250dp"
         android:text="@string/textViewText"
-         android:paddingEnd="10dp"
+        android:layout_marginHorizontal="10dp"
         android:textSize="30sp"
         android:gravity="center_vertical|end"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.01" />
+        />
 
 
     <Button
@@ -29,7 +27,7 @@
         android:layout_height="80dp"
         android:text="@string/acText"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/buttonDivide"
         app:layout_constraintHorizontal_bias="0.122"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView"

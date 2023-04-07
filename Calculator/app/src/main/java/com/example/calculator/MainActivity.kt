@@ -8,6 +8,10 @@ import android.widget.TextView
 
 class MainActivity : AppCompatActivity() {
 
+    //переписать всё по exp4j
+    //binding
+    //проработать отношения/constraints
+
     private val len = 18
     private val afterPoint = 3
     private var prev: Float = 0.0F
@@ -103,6 +107,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
     }
+
+
 
     private fun plus(): String = (getCurrent().toFloat() + prev).toString()
     private fun minus(): String = (prev - getCurrent().toFloat()).toString()
