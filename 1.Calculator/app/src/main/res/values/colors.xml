@@ -7,4 +7,16 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="background">#1b1a1f</color>
+    <color name="screen">#30333c</color>
+    <color name="number_button">#232429</color>
+    <color name="action_button">#434659</color>
+    <color name="ac_button">#573e54</color>
+    <color name="equals_button">#394376</color>
+    <color name="number_button_pressed">#535257</color>
+    <color name="action_button_pressed">#6b6d7a</color>
+    <color name="ac_button_pressed">#7b6679</color>
+    <color name="equals_button_pressed">#636b92</color>
+    <color name="text">#e3e4f8</color>
+
 </resources>

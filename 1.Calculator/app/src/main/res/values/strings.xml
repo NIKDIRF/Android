@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">Calculator</string>
-    <string name="buttonPointText">,</string>
+    <string name="buttonPointText">.</string>
     <string name="buttonZeroText">0</string>
     <string name="textViewText">0</string>
     <string name="acText">AC</string>
@@ -8,7 +8,7 @@
     <string name="button7Text">7</string>
     <string name="button8Text">8</string>
     <string name="button9Text">9</string>
-    <string name="buttonMultiplyText">X</string>
+    <string name="buttonMultiplyText">*</string>
     <string name="button4Text">4</string>
     <string name="button5Text">5</string>
     <string name="button6Text">6</string>
@@ -19,4 +19,9 @@
     <string name="buttonPlusText">+</string>
     <string name="buttonBackText">◄</string>
     <string name="buttonEqualsText">=</string>
+
+    <string name="division_by_zero">Division by zero!</string>
+    <string name="incorrect_number_format">Incorrect number format!</string>
+    <string name="invalid_expression">Invalid expression!</string>
+    <string name="error">Error!</string>
 </resources>

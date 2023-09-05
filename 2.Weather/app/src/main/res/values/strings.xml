@@ -17,10 +17,10 @@
     <string name="humidityIcon"></string>
     <string name="humidityText">Humidity</string>
 
-    <string name="today">Today</string>
-    <string name="todayIcon"></string>
-    <string name="todayTemperature">22°C</string>
-    <string name="todayText">Fair</string>
+    <string name="wednesday">Wednesday</string>
+    <string name="wednesdayIcon"></string>
+    <string name="wednesdayTemperature">22°C</string>
+    <string name="wednesdayText">Fair</string>
     <string name="tomorrow">Tomorrow</string>
     <string name="tomorrowIcon"></string>
     <string name="tomorrowTemperature">13°C</string>

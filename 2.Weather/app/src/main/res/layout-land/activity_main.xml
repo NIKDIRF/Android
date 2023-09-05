@@ -15,8 +15,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
 
-    <include
-        layout="@layout/main_weather"
+    <com.app.weather.components.WeatherItem
+        android:id="@+id/header"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@id/guideline_10"
@@ -24,30 +24,40 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toStartOf="@id/guidelineVertical_25"/>
 
-    <include
-        layout="@layout/main_weather_info"
+    <LinearLayout
+        android:id="@+id/weather_info"
+        android:orientation="horizontal"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="2.5dp"
+        android:background="@color/foreground"
         app:layout_constraintTop_toBottomOf="@id/guideline_10"
         app:layout_constraintBottom_toTopOf="@id/guideline_50"
         app:layout_constraintStart_toEndOf="@id/guidelineVertical_25"
         app:layout_constraintEnd_toEndOf="parent"/>
 
-    <include
-        layout="@layout/week"
+    <LinearLayout
+        android:id="@+id/week"
+        android:orientation="horizontal"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="10dp"
+        android:layout_marginTop="2.5dp"
+        android:layout_marginBottom="5dp"
+        android:background="@color/foreground"
         app:layout_constraintTop_toBottomOf="@id/guideline_50"
         app:layout_constraintBottom_toTopOf="@id/guideline_85"
         app:layout_constraintStart_toEndOf="@id/guidelineVertical_25"
         app:layout_constraintEnd_toEndOf="parent"/>
 
-    <include
-        layout="@layout/bottom_menu"
+    <LinearLayout
+        android:id="@+id/bottom_menu"
+        android:orientation="horizontal"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:background="@color/foreground"
         app:layout_constraintTop_toBottomOf="@id/guideline_85"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
