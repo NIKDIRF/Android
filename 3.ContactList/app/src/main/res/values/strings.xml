@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">3.ContactList</string>
+    <string name="search">Search</string>
+    <string name="tool_text">Братки</string>
+
+    <plurals name="contacts_toast">
+        <item quantity="one">Found %1$d contact</item>
+        <item quantity="other">Found %1$d contacts</item>
+    </plurals>
+</resources>
